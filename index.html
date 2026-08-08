@@ -1,105 +1,189 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Patria Games | Brazilian Root®</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patria Games | Official Website</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            background-color: #0b0e14;
-            color: #d1d5db;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
         header {
-            background: linear-gradient(135deg, #161b26 0%, #111827 100%);
-            border-bottom: 2px solid #2563eb;
-            padding: 30px;
+            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+            border-bottom: 2px solid #238636;
+            padding: 40px 20px;
             text-align: center;
         }
-        .logo-title {
-            font-size: 2.5rem;
+
+        .brand-title {
+            font-size: 2.8rem;
             font-weight: 800;
-            color: #fff;
+            color: #ffffff;
             letter-spacing: 2px;
+            text-transform: uppercase;
         }
-        .logo-title span { color: #2563eb; }
-        .tagline { color: #9ca3af; font-size: 0.9rem; letter-spacing: 1.5px; }
-        
+
+        .brand-title span {
+            color: #2e8fff;
+        }
+
+        .tagline {
+            color: #8b949e;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+
         .container {
-            max-width: 1000px;
-            margin: 30px auto;
+            max-width: 900px;
+            margin: 40px auto;
             padding: 0 20px;
         }
+
         .card {
-            background: #111827;
-            border: 1px solid #1f2937;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 25px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
         }
-        h2 { color: #f3f4f6; border-bottom: 2px solid #2563eb; padding-bottom: 8px; }
-        p { color: #9ca3af; line-height: 1.6; }
-        
+
+        h2 {
+            color: #f0f6fc;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #58a6ff;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #8b949e;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            color: #8b949e;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .badge-group {
+            margin-bottom: 15px;
+        }
+
         .badge {
-            background: #1e3a8a;
-            color: #93c5fd;
+            display: inline-block;
+            background: #1f6feb22;
+            color: #58a6ff;
+            border: 1px solid #1f6feb;
             padding: 4px 10px;
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: 0.8rem;
-            font-weight: bold;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-right: 6px;
         }
+
         .btn-steam {
             display: inline-block;
-            background: #2563eb;
-            color: #fff;
+            background-color: #238636;
+            color: #ffffff;
             padding: 12px 24px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 15px;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-steam:hover {
+            background-color: #2ea043;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.85rem;
+            color: #484f58;
+            border-top: 1px solid #21262d;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-title">PÁTRIA <span>GAMES</span></div>
-        <div class="tagline">ESTÚDIO INDEPENDENTE DE JOGOS • RIO DE JANEIRO, BRASIL</div>
+        <div class="brand-title">PATRIA <span>GAMES</span></div>
+        <div class="tagline">Solo Game Development Studio • Rio de Janeiro, Brazil</div>
     </header>
 
     <div class="container">
         
-        <!-- Sobre a Empresa -->
+        <!-- About Studio -->
         <div class="card">
-            <h2>Sobre a Pátria Games®</h2>
+            <h2>About Patria Games</h2>
             <p>
-                A <strong>Patria Games®</strong> é uma desenvolvedora brasileira e independente de jogos digitais fundada no Rio de Janeiro. Focada na criação de experiências imersivas, enredos marcantes e jogabilidade desafiadora, o estúdio busca destacar a capacidade do desenvolvimento nacional no mercado global.
+                <strong>Patria Games</strong> is an independent solo game development studio founded in Rio de Janeiro, Brazil. Dedicated to crafting immersive narrative experiences and challenging gameplay mechanics, the studio aims to showcase original game design to a global audience.
             </p>
         </div>
 
-        <!-- Destaque do Jogo -->
+        <!-- Featured Game -->
         <div class="card">
-            <span class="badge">FPS HARDCORE</span> <span class="badge">CRYENGINE</span>
-            <h1 style="color: #fff; margin-top: 10px;">Brazilian Root®</h1>
+            <div class="badge-group">
+                <span class="badge">Solo Dev</span>
+                <span class="badge">Hardcore FPS</span>
+                <span class="badge">CryEngine</span>
+                <span class="badge">Indie Action</span>
+            </div>
+            
+            <h1 style="color: #f0f6fc; font-size: 2rem; margin-bottom: 10px;">Brazilian Root®</h1>
             <p>
-                <strong>Desenvolvido por uma equipe de 2 pessoas</strong>, <em>Brazilian Root®</em> é um jogo de ação indie hardcore em primeira pessoa ambientado em cenários inspirados na cidade do Rio de Janeiro.
+                Developed by a solo developer, <strong>Brazilian Root®</strong> is a fast-paced, hardcore first-person shooter set against the backdrop of fictionalized Rio de Janeiro environments.
             </p>
-            <h3>História</h3>
+
+            <h3>Storyline</h3>
             <p>
-                Você assume o papel de <strong>Benjamin</strong>, um ex-soldado das forças de operações especiais que ingressou na política para mudar o país. Faltando apenas 30 dias para a eleição para governador, sua filha é misteriosamente sequestrada. Agora, Benjamin precisará reacender seus dias de combate para resgatá-la e buscar vingança.
+                Players assume the role of <strong>Benjamin</strong>, a former special operations soldier who retired from military duty to enter politics and drive social change. Just 30 days before the governor election, his daughter is mysteriously kidnapped. Forced to rely on his former tactical skills, Benjamin embarks on a relentless mission to rescue his daughter and seek justice.
             </p>
-            <h3>Diferenciais de Jogabilidade</h3>
+
+            <h3>Key Features</h3>
             <ul>
-                <li><strong>Sem "Quick Time Events":</strong> Foco 100% na ação rápida, reflexo e habilidade de tiro.</li>
-                <li><strong>Desafio Elevado:</strong> Apenas 1 checkpoint por fase, exigindo precisão e estratégia.</li>
-                <li><strong>Audio & Visual:</strong> Desenvolvido na CryEngine com sistema sonoro alimentado por Audiokinetic Wwise©.</li>
+                <li><strong>Skill-Focused Gameplay:</strong> Pure shooter action free of Quick Time Events (QTEs).</li>
+                <li><strong>High-Stakes Challenge:</strong> Single-checkpoint per level design that demands tactical movement and precision.</li>
+                <li><strong>Visuals & Audio:</strong> Built on CryEngine, featuring dynamic audio design powered by Audiokinetic Wwise©.</li>
             </ul>
 
-            <a href="https://store.steampowered.com/app/809500/Brazilian_Root/" target="_blank" class="btn-steam">Ver na Steam</a>
+            <a href="https://store.steampowered.com/app/809500/Brazilian_Root/" target="_blank" class="btn-steam">View on Steam</a>
         </div>
 
     </div>
+
+    <footer>
+        &copy; Patria Games. All rights reserved. Brazilian Root® is a registered trademark of Patria Games.
+    </footer>
 
 </body>
 </html>
