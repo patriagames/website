@@ -2,83 +2,104 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pátria Games</title>
+    <title>Patria Games | Brazilian Root®</title>
     <style>
-        * {
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: #0b0e14;
+            color: #d1d5db;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        body {
-            background-color: #0d1117;
-            color: #f0f6fc;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        header {
+            background: linear-gradient(135deg, #161b26 0%, #111827 100%);
+            border-bottom: 2px solid #2563eb;
+            padding: 30px;
             text-align: center;
-            padding: 20px;
         }
-
-        .container {
-            max-width: 600px;
-            background: #161b22;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #30363d;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-        }
-
-        h1 {
+        .logo-title {
             font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #58a6ff;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 2px;
         }
-
-        p {
-            font-size: 1.1rem;
-            color: #8b949e;
+        .logo-title span { color: #2563eb; }
+        .tagline { color: #9ca3af; font-size: 0.9rem; letter-spacing: 1.5px; }
+        
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 8px;
+            padding: 25px;
             margin-bottom: 25px;
-            line-height: 1.6;
         }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #238636;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 6px;
+        h2 { color: #f3f4f6; border-bottom: 2px solid #2563eb; padding-bottom: 8px; }
+        p { color: #9ca3af; line-height: 1.6; }
+        
+        .badge {
+            background: #1e3a8a;
+            color: #93c5fd;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
             font-weight: bold;
-            transition: background-color 0.2s ease;
         }
-
-        .btn:hover {
-            background-color: #2ea043;
-        }
-
-        footer {
-            margin-top: 30px;
-            font-size: 0.85rem;
-            color: #484f58;
+        .btn-steam {
+            display: inline-block;
+            background: #2563eb;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Pátria Games</h1>
-        <p>Nosso site está em desenvolvimento. Em breve compartilharemos novidades e nossos projetos por aqui!</p>
-        <a href="https://github.com/patriagames" class="btn" target="_blank">Acesse nosso GitHub</a>
-    </div>
+    <header>
+        <div class="logo-title">PÁTRIA <span>GAMES</span></div>
+        <div class="tagline">ESTÚDIO INDEPENDENTE DE JOGOS • RIO DE JANEIRO, BRASIL</div>
+    </header>
 
-    <footer>
-        &copy; Pátria Games. Todos os direitos reservados.
-    </footer>
+    <div class="container">
+        
+        <!-- Sobre a Empresa -->
+        <div class="card">
+            <h2>Sobre a Pátria Games®</h2>
+            <p>
+                A <strong>Patria Games®</strong> é uma desenvolvedora brasileira e independente de jogos digitais fundada no Rio de Janeiro. Focada na criação de experiências imersivas, enredos marcantes e jogabilidade desafiadora, o estúdio busca destacar a capacidade do desenvolvimento nacional no mercado global.
+            </p>
+        </div>
+
+        <!-- Destaque do Jogo -->
+        <div class="card">
+            <span class="badge">FPS HARDCORE</span> <span class="badge">CRYENGINE</span>
+            <h1 style="color: #fff; margin-top: 10px;">Brazilian Root®</h1>
+            <p>
+                <strong>Desenvolvido por uma equipe de 2 pessoas</strong>, <em>Brazilian Root®</em> é um jogo de ação indie hardcore em primeira pessoa ambientado em cenários inspirados na cidade do Rio de Janeiro.
+            </p>
+            <h3>História</h3>
+            <p>
+                Você assume o papel de <strong>Benjamin</strong>, um ex-soldado das forças de operações especiais que ingressou na política para mudar o país. Faltando apenas 30 dias para a eleição para governador, sua filha é misteriosamente sequestrada. Agora, Benjamin precisará reacender seus dias de combate para resgatá-la e buscar vingança.
+            </p>
+            <h3>Diferenciais de Jogabilidade</h3>
+            <ul>
+                <li><strong>Sem "Quick Time Events":</strong> Foco 100% na ação rápida, reflexo e habilidade de tiro.</li>
+                <li><strong>Desafio Elevado:</strong> Apenas 1 checkpoint por fase, exigindo precisão e estratégia.</li>
+                <li><strong>Audio & Visual:</strong> Desenvolvido na CryEngine com sistema sonoro alimentado por Audiokinetic Wwise©.</li>
+            </ul>
+
+            <a href="https://store.steampowered.com/app/809500/Brazilian_Root/" target="_blank" class="btn-steam">Ver na Steam</a>
+        </div>
+
+    </div>
 
 </body>
 </html>
