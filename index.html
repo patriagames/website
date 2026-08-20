@@ -1,189 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patria Games | Official Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Patria Games is an independent game development studio based in Rio de Janeiro, Brazil, creator of Brazilian Root and Roulettegeddon." />
+  <meta name="theme-color" content="#050608" />
+  <title>Patria Games | Independent Game Studio</title>
 
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
-            border-bottom: 2px solid #238636;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .brand-title {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .brand-title span {
-            color: #2e8fff;
-        }
-
-        .tagline {
-            color: #8b949e;
-            font-size: 0.95rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-top: 8px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-        }
-
-        h2 {
-            color: #f0f6fc;
-            font-size: 1.5rem;
-            border-bottom: 2px solid #30363d;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            color: #58a6ff;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            margin-bottom: 8px;
-        }
-
-        p {
-            color: #8b949e;
-            margin-bottom: 12px;
-            font-size: 1rem;
-        }
-
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-            color: #8b949e;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .badge-group {
-            margin-bottom: 15px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #1f6feb22;
-            color: #58a6ff;
-            border: 1px solid #1f6feb;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-right: 6px;
-        }
-
-        .btn-steam {
-            display: inline-block;
-            background-color: #238636;
-            color: #ffffff;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: background-color 0.2s;
-        }
-
-        .btn-steam:hover {
-            background-color: #2ea043;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.85rem;
-            color: #484f58;
-            border-top: 1px solid #21262d;
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
 
-    <header>
-        <div class="brand-title">PATRIA <span>GAMES</span></div>
-        <div class="tagline">Solo Game Development Studio • Rio de Janeiro, Brazil</div>
-    </header>
+  <header class="header" id="top">
+    <div class="container nav-container">
+      <a class="brand" href="#top" aria-label="Patria Games — home">
+        <img src="assets/patria-logo.png" alt="Patria Games" />
+      </a>
 
-    <div class="container">
-        
-        <!-- About Studio -->
-        <div class="card">
-            <h2>About Patria Games</h2>
-            <p>
-                <strong>Patria Games</strong> is an independent solo game development studio founded in Rio de Janeiro, Brazil. Dedicated to crafting immersive narrative experiences and challenging gameplay mechanics, the studio aims to showcase original game design to a global audience.
-            </p>
-        </div>
+      <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
+        <a class="nav-link" href="#games">Games</a>
+        <a class="nav-link" href="#studio">Studio</a>
+        <a class="nav-link" href="#community">Community</a>
+      </nav>
 
-        <!-- Featured Game -->
-        <div class="card">
-            <div class="badge-group">
-                <span class="badge">Solo Dev</span>
-                <span class="badge">Hardcore FPS</span>
-                <span class="badge">CryEngine</span>
-                <span class="badge">Indie Action</span>
-            </div>
-            
-            <h1 style="color: #f0f6fc; font-size: 2rem; margin-bottom: 10px;">Brazilian Root®</h1>
-            <p>
-                Developed by a solo developer, <strong>Brazilian Root®</strong> is a fast-paced, hardcore first-person shooter set against the backdrop of fictionalized Rio de Janeiro environments.
-            </p>
-
-            <h3>Storyline</h3>
-            <p>
-                Players assume the role of <strong>Benjamin</strong>, a former special operations soldier who retired from military duty to enter politics and drive social change. Just 30 days before the governor election, his daughter is mysteriously kidnapped. Forced to rely on his former tactical skills, Benjamin embarks on a relentless mission to rescue his daughter and seek justice.
-            </p>
-
-            <h3>Key Features</h3>
-            <ul>
-                <li><strong>Skill-Focused Gameplay:</strong> Pure shooter action free of Quick Time Events (QTEs).</li>
-                <li><strong>High-Stakes Challenge:</strong> Single-checkpoint per level design that demands tactical movement and precision.</li>
-                <li><strong>Visuals & Audio:</strong> Built on CryEngine, featuring dynamic audio design powered by Audiokinetic Wwise©.</li>
-            </ul>
-
-            <a href="https://store.steampowered.com/app/809500/Brazilian_Root/" target="_blank" class="btn-steam">View on Steam</a>
-        </div>
-
+      <div class="nav-actions">
+        <a class="btn btn-ghost btn-small desktop-only" href="#games"><i class="ph ph-steam-logo"></i> Steam</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <footer>
-        &copy; Patria Games. All rights reserved. Brazilian Root® is a registered trademark of Patria Games.
-    </footer>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><span class="status-dot"></span> Independent game studio · Rio de Janeiro</span>
+          <h1 id="hero-title">Games with <span>personality.</span><br />No safe bets.</h1>
+          <p class="hero-lead">Patria Games creates original PC experiences with a strong identity, distinctive humor, action, and worlds built to stand apart.</p>
 
+          <div class="hero-actions">
+            <a href="#roulettegeddon" class="btn btn-primary"><i class="ph ph-play-circle"></i> Explore Roulettegeddon</a>
+            <a href="#games" class="btn btn-outline">View our games</a>
+          </div>
+
+          <div class="hero-meta">
+            <div><strong>2015</strong><span>Founded</span></div>
+            <div><strong>2</strong><span>Original titles</span></div>
+            <div><strong>PC</strong><span>Primary platform</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Roulettegeddon visual showcase">
+          <div class="hero-card">
+            <div class="hero-card-topline">
+              <span>NOW IN DEVELOPMENT</span>
+              <span>2026</span>
+            </div>
+            <div class="roulette-art" aria-hidden="true">
+              <div class="roulette-ring ring-1"></div>
+              <div class="roulette-ring ring-2"></div>
+              <div class="roulette-ring ring-3"></div>
+              <div class="roulette-core">R</div>
+              <div class="floating-chip chip-a">17</div>
+              <div class="floating-chip chip-b">0</div>
+              <div class="floating-chip chip-c">32</div>
+            </div>
+            <div class="hero-card-copy">
+              <span class="kicker">Featured game</span>
+              <img class="roulette-logo roulette-logo-hero" src="assets/roulettegeddon-logo.png" alt="Roulettegeddon" />
+              <p>One casino. Several bad ideas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#roulettegeddon" aria-label="Go to Roulettegeddon">
+        <span>SCROLL</span><i class="ph ph-arrow-down"></i>
+      </a>
+    </section>
+
+    <section id="roulettegeddon" class="featured-game section">
+      <div class="container">
+        <div class="section-kicker reveal">01 · Current project</div>
+        <div class="featured-grid">
+          <div class="featured-media reveal">
+            <div class="media-frame roulette-frame">
+              <div class="media-overlay"></div>
+              <div class="media-badge">DEMO AVAILABLE</div>
+              <img class="roulette-logo roulette-logo-featured" src="assets/roulettegeddon-logo.png" alt="Roulettegeddon" />
+              <div class="media-subtitle">Spin. Lose. Earn it back. Repeat.</div>
+            </div>
+          </div>
+
+          <div class="featured-copy reveal">
+            <span class="eyebrow yellow">Roulette · Dark comedy · Zombies · Mini-games</span>
+            <h2>One casino.<br /><span>Several bad ideas.</span></h2>
+            <p>Roulettegeddon combines traditional roulette, dark comedy and an undead cast with a shared economy connecting several mini-games.</p>
+            <p>When the table takes everything, step away from the casino and earn credits back in <strong>Zombie Gladiator</strong>, <strong>Rotten Cookies</strong> and <strong>Splatter Van</strong> — then return to the roulette table and risk it all again.</p>
+
+            <div class="feature-pills">
+              <span><i class="ph ph-check"></i> Traditional roulette</span>
+              <span><i class="ph ph-check"></i> Rotten Bob</span>
+              <span><i class="ph ph-check"></i> Shared economy</span>
+              <span><i class="ph ph-check"></i> Multiple game modes</span>
+            </div>
+
+            <div class="featured-actions">
+              <a class="btn btn-primary" href="#"><i class="ph ph-steam-logo"></i> Wishlist & play demo</a>
+              <span class="release-note">Planned release · Late 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-story section compact-section" aria-labelledby="company-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-kicker">Patria Games · Since 2015</span>
+            <h2 id="company-title">Small studio.<br />Long-term ambition.</h2>
+          </div>
+          <p>Independent development from Rio de Janeiro, built through persistence, technical problem-solving and a clear creative identity.</p>
+        </div>
+
+        <div class="mode-grid company-grid">
+          <article class="mode-card company-card reveal">
+            <span class="mode-index">01</span>
+            <i class="ph ph-map-pin mode-icon"></i>
+            <h3>Born in Rio</h3>
+            <p>Patria Games was founded in June 2015 in Rio de Janeiro, Brazil, with the goal of building original games independently.</p>
+            <span class="mode-tag">RIO DE JANEIRO · BRAZIL</span>
+          </article>
+
+          <article class="mode-card company-card reveal">
+            <span class="mode-index">02</span>
+            <i class="ph ph-hammer mode-icon"></i>
+            <h3>Built by Persistence</h3>
+            <p>Brazilian Root took four years of daily development, overcoming tight budgets and technical barriers before its Steam release in 2018.</p>
+            <span class="mode-tag">4 YEARS OF DEVELOPMENT</span>
+          </article>
+
+          <article class="mode-card company-card reveal">
+            <span class="mode-index">03</span>
+            <i class="ph ph-user mode-icon"></i>
+            <h3>Independent Today</h3>
+            <p>In 2026, Patria Games remains an extremely lean studio, now driven by a single developer and focused on the upcoming Roulettegeddon.</p>
+            <span class="mode-tag">ONE DEVELOPER · 2026</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="games section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-kicker">Games</span>
+            <h2>Built in Rio.<br />Played everywhere.</h2>
+          </div>
+          <p>Original titles developed and published by Patria Games.</p>
+        </div>
+
+        <div class="games-list">
+          <article class="game-row reveal">
+            <div class="game-row-number">01</div>
+            <div class="game-row-art art-roulette"><span>ROULETTEGEDDON</span></div>
+            <div class="game-row-copy">
+              <div class="game-row-meta"><span>IN DEVELOPMENT</span><span>2026</span></div>
+              <h3>Roulettegeddon</h3>
+              <p>Traditional roulette wrapped in dark comedy, undead hosts and connected mini-games.</p>
+              <a href="#roulettegeddon" class="text-link">Explore game <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="game-row reveal">
+            <div class="game-row-number">02</div>
+            <div class="game-row-art art-brazilian"><span>BRAZILIAN ROOT</span></div>
+            <div class="game-row-copy">
+              <div class="game-row-meta"><span>RELEASED ON STEAM</span><span>2018</span></div>
+              <h3>Brazilian Root®</h3>
+              <p>Hardcore tactical FPS set in fictional locations of Rio de Janeiro, developed with CryEngine.</p>
+              <a href="#" class="text-link">View on Steam <i class="ph ph-arrow-up-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio" class="studio section">
+      <div class="container studio-grid">
+        <div class="studio-heading reveal">
+          <span class="section-kicker">The studio</span>
+          <h2>Independent<br />by design.</h2>
+        </div>
+
+        <div class="studio-copy reveal">
+          <p class="studio-intro">Founded in June 2015 in Rio de Janeiro, Patria Games was created to turn independent game development into something tangible — even with a small team and limited resources.</p>
+          <p>Its first major project, <strong>Brazilian Root®</strong>, required four years of development and was released on Steam in 2018. Today, the studio remains lean and focused on the original development of <strong>Roulettegeddon</strong>.</p>
+
+          <div class="studio-stats">
+            <div><strong>2015</strong><span>Founded in Rio de Janeiro</span></div>
+            <div><strong>2018</strong><span>Brazilian Root released</span></div>
+            <div><strong>2026</strong><span>Roulettegeddon planned</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="community" class="community section">
+      <div class="container">
+        <div class="community-panel reveal">
+          <div>
+            <span class="section-kicker">Stay connected</span>
+            <h2>Follow the next bad idea.</h2>
+            <p>Wishlist our games on Steam and follow development updates from Patria Games.</p>
+          </div>
+          <div class="community-actions">
+            <a href="#" class="btn btn-primary"><i class="ph ph-steam-logo"></i> Steam</a>
+            <a href="#" class="social-button" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="social-button" aria-label="Discord"><i class="ph ph-discord-logo"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="assets/patria-logo.png" alt="Patria Games" />
+        <p>Independent game studio · Rio de Janeiro, Brazil</p>
+      </div>
+      <div class="footer-side">
+        <div class="footer-links">
+          <a href="#games">Games</a>
+          <a href="#studio">Studio</a>
+          <a href="#community">Community</a>
+        </div>
+        <p>© 2026 Patria Games. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
