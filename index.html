@@ -3,37 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Patria Games is an independent game development studio based in Rio de Janeiro, Brazil, creator of Brazilian Root and Roulettegeddon." />
+  <meta
+    name="description"
+    content="Patria Games is an independent game development studio based in Rio de Janeiro, Brazil, creator of Brazilian Root and Roulettegeddon."
+  />
   <meta name="theme-color" content="#050608" />
+  <link rel="canonical" href="https://www.patriagames.com/" />
   <title>Patria Games | Independent Game Studio</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-180.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Patria Games" />
+  <meta property="og:title" content="Patria Games | Independent Game Studio" />
+  <meta
+    property="og:description"
+    content="Independent game studio in Rio de Janeiro, Brazil. Creators of Roulettegeddon and Brazilian Root."
+  />
+  <meta property="og:image" content="https://www.patriagames.com/assets/social-share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://www.patriagames.com/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Patria Games | Independent Game Studio" />
+  <meta
+    name="twitter:description"
+    content="Independent game studio in Rio de Janeiro, Brazil. Creators of Roulettegeddon and Brazilian Root."
+  />
+  <meta name="twitter:image" content="https://www.patriagames.com/assets/social-share.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.2"></script>
   <link rel="stylesheet" href="style.css" />
+
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .menu-toggle { display: none !important; }
+      .nav-menu {
+        position: static !important;
+        right: auto !important;
+        width: auto !important;
+        height: auto !important;
+        border: 0 !important;
+        background: transparent !important;
+        padding: 0 !important;
+        flex-direction: row !important;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
 
   <header class="header" id="top">
-    <div class="container nav-container">
-      <a class="brand" href="#top" aria-label="Patria Games — home">
-        <img src="assets/patria-logo.png" alt="Patria Games" />
-      </a>
+    <div class="container">
+      <div class="header-shell nav-container">
+        <a class="brand" href="#top" aria-label="Patria Games home" data-media-shell>
+          <img src="assets/patria-logo.png" alt="Patria Games" data-media-image />
+          <span class="brand-fallback" data-media-fallback>Patria Games</span>
+        </a>
 
-      <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
-        <a class="nav-link" href="#games">Games</a>
-        <a class="nav-link" href="#studio">Studio</a>
-        <a class="nav-link" href="#community">Community</a>
-      </nav>
+        <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
+          <a class="nav-link" href="#games">Games</a>
+          <a class="nav-link" href="#trailers">Trailers</a>
+          <a class="nav-link" href="#studio">Studio</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="#community">Community</a>
+        </nav>
 
-      <div class="nav-actions">
-        <a class="btn btn-ghost btn-small desktop-only" href="#games"><i class="ph ph-steam-logo"></i> Steam</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-          <i class="ph ph-list"></i>
-        </button>
+        <div class="nav-actions">
+          <a class="btn btn-ghost btn-small desktop-only" href="#contact">
+            <i class="ph ph-envelope-simple"></i> Contact
+          </a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -42,17 +97,26 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow"><span class="status-dot"></span> Independent game studio · Rio de Janeiro</span>
-          <h1 id="hero-title">Games with <span>personality.</span><br />No safe bets.</h1>
-          <p class="hero-lead">Patria Games creates original PC experiences with a strong identity, distinctive humor, action, and worlds built to stand apart.</p>
+          <span class="eyebrow"><span class="status-dot"></span> Independent game studio - Rio de Janeiro</span>
+          <h1 id="hero-title">Brazilian games with attitude.</h1>
+          <p class="hero-lead">
+            Patria Games creates original PC experiences with a strong identity, sharp atmosphere and enough personality to
+            stand apart from safer releases.
+          </p>
 
           <div class="hero-actions">
             <a href="#roulettegeddon" class="btn btn-primary"><i class="ph ph-play-circle"></i> Explore Roulettegeddon</a>
             <a href="#games" class="btn btn-outline">View our games</a>
           </div>
 
+          <a class="hero-contact-card" href="mailto:contact@patriagames.com" aria-label="Email Patria Games at contact@patriagames.com">
+            <span class="hero-contact-label">Business contact</span>
+            <strong>contact@patriagames.com</strong>
+            <small>Publishing, partnerships and press conversations.</small>
+          </a>
+
           <div class="hero-meta">
-            <div><strong>2015</strong><span>Founded</span></div>
+            <div><strong>2015</strong><span>Founded in Rio</span></div>
             <div><strong>2</strong><span>Original titles</span></div>
             <div><strong>PC</strong><span>Primary platform</span></div>
           </div>
@@ -64,20 +128,48 @@
               <span>NOW IN DEVELOPMENT</span>
               <span>2026</span>
             </div>
-            <div class="roulette-art" aria-hidden="true">
-              <div class="roulette-ring ring-1"></div>
-              <div class="roulette-ring ring-2"></div>
-              <div class="roulette-ring ring-3"></div>
-              <div class="roulette-core">R</div>
-              <div class="floating-chip chip-a">17</div>
-              <div class="floating-chip chip-b">0</div>
-              <div class="floating-chip chip-c">32</div>
-            </div>
+
             <div class="hero-card-copy">
               <span class="kicker">Featured game</span>
-              <img class="roulette-logo roulette-logo-hero" src="assets/roulettegeddon-logo.png" alt="Roulettegeddon" />
-              <p>One casino. Several bad ideas.</p>
+              <div class="logo-lockup logo-lockup-hero" data-media-shell>
+                <img
+                  class="roulette-logo roulette-logo-hero"
+                  src="assets/roulettegeddon-logo.png"
+                  alt="Roulettegeddon"
+                  data-media-image
+                />
+                <div class="logo-text-fallback logo-text-fallback-hero" data-media-fallback>Roulettegeddon</div>
+              </div>
+              <div class="hero-card-story">
+                <h3>:: WELCOME TO ROULETTEGEDDON! ::</h3>
+                <p>
+                  Welcome to Roulettegeddon - where the wheel keeps spinning, the dead keep talking, and your financial
+                  decisions somehow keep getting worse.
+                </p>
+                <p>
+                  At its rotten heart, Roulettegeddon is a fully playable traditional roulette game wrapped in a dark,
+                  grotesque world filled with zombies, black humor, strange contraptions and questionable ways of making money.
+                </p>
+                <p>
+                  Place classic roulette bets, chase your lucky numbers and try to grow your balance while sharing the table
+                  with Rotten Bob - a sarcastic zombie who has somehow managed to lose almost everything... including his body.
+                </p>
+              </div>
             </div>
+          </div>
+
+          <div class="hero-notes">
+            <article class="note-card">
+              <span>Current focus</span>
+              <strong>Roulettegeddon</strong>
+              <p>Dark comedy, classic roulette and mini-games sharing the same economy.</p>
+            </article>
+
+            <article class="note-card note-card-contact">
+              <span>Direct line</span>
+              <a href="mailto:contact@patriagames.com">contact@patriagames.com</a>
+              <p>The best place for business, press and collaboration requests.</p>
+            </article>
           </div>
         </div>
       </div>
@@ -89,22 +181,38 @@
 
     <section id="roulettegeddon" class="featured-game section">
       <div class="container">
-        <div class="section-kicker reveal">01 · Current project</div>
+        <div class="section-kicker reveal">01 - Current project</div>
+
         <div class="featured-grid">
           <div class="featured-media reveal">
             <div class="media-frame roulette-frame">
               <div class="media-overlay"></div>
               <div class="media-badge">DEMO AVAILABLE</div>
-              <img class="roulette-logo roulette-logo-featured" src="assets/roulettegeddon-logo.png" alt="Roulettegeddon" />
+              <div class="logo-lockup logo-lockup-featured" data-media-shell>
+                <img
+                  class="roulette-logo roulette-logo-featured"
+                  src="assets/roulettegeddon-logo.png"
+                  alt="Roulettegeddon"
+                  data-media-image
+                />
+                <div class="logo-text-fallback logo-text-fallback-featured" data-media-fallback>Roulettegeddon</div>
+              </div>
               <div class="media-subtitle">Spin. Lose. Earn it back. Repeat.</div>
             </div>
           </div>
 
           <div class="featured-copy reveal">
-            <span class="eyebrow yellow">Roulette · Dark comedy · Zombies · Mini-games</span>
+            <span class="eyebrow yellow">Roulette - Dark comedy - Zombies - Mini-games</span>
             <h2>One casino.<br /><span>Several bad ideas.</span></h2>
-            <p>Roulettegeddon combines traditional roulette, dark comedy and an undead cast with a shared economy connecting several mini-games.</p>
-            <p>When the table takes everything, step away from the casino and earn credits back in <strong>Zombie Gladiator</strong>, <strong>Rotten Cookies</strong> and <strong>Splatter Van</strong> — then return to the roulette table and risk it all again.</p>
+            <p>
+              Roulettegeddon combines traditional roulette, dark comedy and an undead cast with a shared economy connecting
+              several mini-games.
+            </p>
+            <p>
+              When the table takes everything, step away from the casino and earn credits back in
+              <strong>Zombie Gladiator</strong>, <strong>Rotten Cookies</strong> and <strong>Splatter Van</strong>, then return
+              to the table and risk it all again.
+            </p>
 
             <div class="feature-pills">
               <span><i class="ph ph-check"></i> Traditional roulette</span>
@@ -114,8 +222,20 @@
             </div>
 
             <div class="featured-actions">
-              <a class="btn btn-primary" href="#"><i class="ph ph-steam-logo"></i> Wishlist & play demo</a>
-              <span class="release-note">Planned release · Late 2026</span>
+              <!-- TODO: replace with real Steam store page URL before launch -->
+              <a class="btn btn-primary" href="#"><i class="ph ph-steam-logo"></i> Wishlist and play demo</a>
+              <span class="release-note">Planned release - Late 2026</span>
+            </div>
+
+            <div class="feature-aside">
+              <div class="feature-aside-card">
+                <span>Genre stack</span>
+                <strong>Roulette, dark comedy and undead mini-games.</strong>
+              </div>
+              <div class="feature-aside-card">
+                <span>Business contact</span>
+                <a class="feature-contact-link" href="mailto:contact@patriagames.com">contact@patriagames.com</a>
+              </div>
             </div>
           </div>
         </div>
@@ -126,7 +246,7 @@
       <div class="container">
         <div class="section-heading reveal">
           <div>
-            <span class="section-kicker">Patria Games · Since 2015</span>
+            <span class="section-kicker">Patria Games - Since 2015</span>
             <h2 id="company-title">Small studio.<br />Long-term ambition.</h2>
           </div>
           <p>Independent development from Rio de Janeiro, built through persistence, technical problem-solving and a clear creative identity.</p>
@@ -138,13 +258,13 @@
             <i class="ph ph-map-pin mode-icon"></i>
             <h3>Born in Rio</h3>
             <p>Patria Games was founded in June 2015 in Rio de Janeiro, Brazil, with the goal of building original games independently.</p>
-            <span class="mode-tag">RIO DE JANEIRO · BRAZIL</span>
+            <span class="mode-tag">RIO DE JANEIRO - BRAZIL</span>
           </article>
 
           <article class="mode-card company-card reveal">
             <span class="mode-index">02</span>
             <i class="ph ph-hammer mode-icon"></i>
-            <h3>Built by Persistence</h3>
+            <h3>Built by persistence</h3>
             <p>Brazilian Root took four years of daily development, overcoming tight budgets and technical barriers before its Steam release in 2018.</p>
             <span class="mode-tag">4 YEARS OF DEVELOPMENT</span>
           </article>
@@ -152,11 +272,37 @@
           <article class="mode-card company-card reveal">
             <span class="mode-index">03</span>
             <i class="ph ph-user mode-icon"></i>
-            <h3>Independent Today</h3>
-            <p>In 2026, Patria Games remains an extremely lean studio, now driven by a single developer and focused on the upcoming Roulettegeddon.</p>
-            <span class="mode-tag">ONE DEVELOPER · 2026</span>
+            <h3>Independent today</h3>
+            <p>In 2026, Patria Games remains a lean studio focused on making memorable games without losing its own voice.</p>
+            <span class="mode-tag">ONE DEVELOPER - 2026</span>
           </article>
         </div>
+
+        <article class="developer-note reveal" aria-labelledby="developer-note-title">
+          <div class="developer-note-head">
+            <span class="section-kicker">A note from the developer</span>
+            <h3 id="developer-note-title">Patria Games is now a solo studio.</h3>
+          </div>
+
+          <div class="developer-note-body">
+            <p>
+              Patria Games began as a two-person company, but as of 2026 it is run by one solo developer. Development on
+              <strong>Brazilian Root</strong> started back in 2014, and the years since then brought both milestones and
+              setbacks: family changes, a hacked website, personal loss and, after the final patch, a hard drive failure that
+              destroyed the core backup files for the game.
+            </p>
+            <p>
+              Because of that backup loss, <strong>Brazilian Root</strong> can no longer receive updates. Please keep that in
+              mind before buying it and when writing a Steam review. Older review replies were written by the former
+              co-founder; today, every response is written personally by the current developer. Right now, all ongoing
+              development is focused on <strong>Roulettegeddon</strong>.
+            </p>
+            <p class="developer-note-thanks">
+              Thank you for all the support, patience and love shown to Patria Games.
+            </p>
+            <p class="developer-note-signoff">Best regards, Leo</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -170,47 +316,153 @@
           <p>Original titles developed and published by Patria Games.</p>
         </div>
 
-        <div class="games-list">
-          <article class="game-row reveal">
-            <div class="game-row-number">01</div>
-            <div class="game-row-art art-roulette"><span>ROULETTEGEDDON</span></div>
-            <div class="game-row-copy">
-              <div class="game-row-meta"><span>IN DEVELOPMENT</span><span>2026</span></div>
-              <h3>Roulettegeddon</h3>
-              <p>Traditional roulette wrapped in dark comedy, undead hosts and connected mini-games.</p>
-              <a href="#roulettegeddon" class="text-link">Explore game <i class="ph ph-arrow-right"></i></a>
+        <div class="games-board">
+          <div class="games-list">
+            <!-- Put each game logo file inside /assets. Recommended file names and sizes are documented in assets/README.md. -->
+            <article class="game-row reveal">
+              <div class="game-row-number">01</div>
+              <div class="game-row-art art-roulette" data-media-shell>
+                <img class="game-row-logo" src="assets/roulettegeddon-logo.png" alt="Roulettegeddon logo" data-media-image />
+                <span class="game-row-fallback" data-media-fallback>ROULETTEGEDDON</span>
+              </div>
+              <div class="game-row-copy">
+                <div class="game-row-meta"><span>IN DEVELOPMENT</span><span>2026</span></div>
+                <h3>Roulettegeddon</h3>
+                <p>Traditional roulette wrapped in dark comedy, undead hosts and connected mini-games.</p>
+                <div class="game-row-links">
+                  <a href="#roulettegeddon" class="text-link">Explore game <i class="ph ph-arrow-right"></i></a>
+                  <a href="#trailers" class="text-link">Watch trailer <i class="ph ph-play"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="game-row reveal">
+              <div class="game-row-number">02</div>
+              <div class="game-row-art art-brazilian" data-media-shell>
+                <img class="game-row-logo" src="assets/brazilian-root-logo.png" alt="Brazilian Root logo" data-media-image />
+                <span class="game-row-fallback" data-media-fallback>BRAZILIAN ROOT</span>
+              </div>
+              <div class="game-row-copy">
+                <div class="game-row-meta"><span>RELEASED ON STEAM</span><span>2018</span></div>
+                <h3>Brazilian Root</h3>
+                <p>Hardcore tactical FPS set in fictional locations of Rio de Janeiro, developed with CryEngine.</p>
+                <!-- TODO: replace with real Steam store page URL before launch -->
+                <div class="game-row-links">
+                  <a
+                    href="https://store.steampowered.com/app/809500/Brazilian_Root/"
+                    class="text-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View on Steam <i class="ph ph-arrow-up-right"></i>
+                  </a>
+                  <a href="#trailers" class="text-link">Watch trailer <i class="ph ph-play"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trailers" class="trailers section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-kicker">Trailers</span>
+            <h2>Show the game.<br />In motion.</h2>
+          </div>
+          <p>Use this area for gameplay reveals, teaser cuts or announcement trailers for each title.</p>
+        </div>
+
+        <div class="trailers-grid">
+          <article class="trailer-card reveal">
+            <div class="trailer-frame">
+              <!-- Replace the placeholder below with your real embed when the trailer is ready.
+              Example YouTube embed:
+              <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" title="Roulettegeddon trailer" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              -->
+              <div class="trailer-placeholder trailer-placeholder-roulette">
+                <span class="trailer-badge">Trailer coming soon</span>
+                <strong>Roulettegeddon</strong>
+                <p>Gameplay, mini-games and casino chaos.</p>
+              </div>
+            </div>
+            <div class="trailer-copy">
+              <div class="game-row-meta"><span>FEATURED VIDEO</span><span>YOUTUBE / VIMEO</span></div>
+              <h3>Roulettegeddon trailer</h3>
+              <p>Reserve this slot for your main trailer, teaser or Steam page video.</p>
             </div>
           </article>
 
-          <article class="game-row reveal">
-            <div class="game-row-number">02</div>
-            <div class="game-row-art art-brazilian"><span>BRAZILIAN ROOT</span></div>
-            <div class="game-row-copy">
-              <div class="game-row-meta"><span>RELEASED ON STEAM</span><span>2018</span></div>
-              <h3>Brazilian Root®</h3>
-              <p>Hardcore tactical FPS set in fictional locations of Rio de Janeiro, developed with CryEngine.</p>
-              <a href="#" class="text-link">View on Steam <i class="ph ph-arrow-up-right"></i></a>
+          <article class="trailer-card reveal">
+            <div class="trailer-frame">
+              <a
+                class="trailer-link-poster trailer-link-poster-youtube"
+                href="https://www.youtube.com/watch?v=wQQXK7kERR0&t=1s"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch the Brazilian Root trailer on YouTube"
+              >
+                <img
+                  src="https://i.ytimg.com/vi/wQQXK7kERR0/hqdefault.jpg"
+                  alt="Brazilian Root trailer thumbnail"
+                  loading="lazy"
+                />
+                <span class="trailer-link-overlay" aria-hidden="true"></span>
+                <span class="trailer-play-pill"><i class="ph ph-youtube-logo"></i> Watch on YouTube</span>
+              </a>
+            </div>
+            <div class="trailer-copy">
+              <div class="game-row-meta"><span>OFFICIAL VIDEO</span><span>YOUTUBE</span></div>
+              <h3>Brazilian Root trailer</h3>
+              <p>Official Brazilian Root trailer. Opens directly on YouTube for maximum compatibility.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="studio" class="studio section">
-      <div class="container studio-grid">
-        <div class="studio-heading reveal">
-          <span class="section-kicker">The studio</span>
-          <h2>Independent<br />by design.</h2>
+    <section id="contact" class="contact-strip section compact-section">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <span class="section-kicker">Contact</span>
+            <h2>Need publishing, press or business contact?</h2>
+            <p>Use the direct company email below for partnerships, press, business and general studio conversations.</p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="contact-email" href="mailto:contact@patriagames.com">contact@patriagames.com</a>
+            <span class="contact-caption">Main contact point for Patria Games.</span>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="studio-copy reveal">
-          <p class="studio-intro">Founded in June 2015 in Rio de Janeiro, Patria Games was created to turn independent game development into something tangible — even with a small team and limited resources.</p>
-          <p>Its first major project, <strong>Brazilian Root®</strong>, required four years of development and was released on Steam in 2018. Today, the studio remains lean and focused on the original development of <strong>Roulettegeddon</strong>.</p>
+    <section id="studio" class="studio section">
+      <div class="container">
+        <div class="studio-shell studio-grid">
+          <div class="studio-heading reveal">
+            <span class="section-kicker">The studio</span>
+            <h2>Independent<br />by design.</h2>
+          </div>
 
-          <div class="studio-stats">
-            <div><strong>2015</strong><span>Founded in Rio de Janeiro</span></div>
-            <div><strong>2018</strong><span>Brazilian Root released</span></div>
-            <div><strong>2026</strong><span>Roulettegeddon planned</span></div>
+          <div class="studio-copy reveal">
+            <p class="studio-intro">
+              Founded in June 2015 in Rio de Janeiro, Patria Games was created to turn independent game development into
+              something tangible even with a small team and limited resources.
+            </p>
+            <p>
+              Its first major project, <strong>Brazilian Root</strong>, required four years of development and was released on
+              Steam in 2018. Today, the studio remains lean and focused on the original development of <strong>Roulettegeddon</strong>.
+            </p>
+
+            <div class="studio-stats">
+              <div><strong>2015</strong><span>Founded in Rio de Janeiro</span></div>
+              <div><strong>2018</strong><span>Brazilian Root released</span></div>
+              <div><strong>2026</strong><span>Roulettegeddon planned</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -219,15 +471,50 @@
     <section id="community" class="community section">
       <div class="container">
         <div class="community-panel reveal">
-          <div>
+          <div class="community-copy">
             <span class="section-kicker">Stay connected</span>
             <h2>Follow the next bad idea.</h2>
-            <p>Wishlist our games on Steam and follow development updates from Patria Games.</p>
+            <p>Visit the official channels, watch the latest trailers and get in touch when you want to talk to the studio.</p>
           </div>
-          <div class="community-actions">
-            <a href="#" class="btn btn-primary"><i class="ph ph-steam-logo"></i> Steam</a>
-            <a href="#" class="social-button" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-            <a href="#" class="social-button" aria-label="Discord"><i class="ph ph-discord-logo"></i></a>
+
+          <div class="community-side">
+            <div class="community-actions">
+              <a href="http://patriagames.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <i class="ph ph-globe-simple"></i> Website
+              </a>
+              <a
+                href="https://x.com/PatriaGamesBr"
+                class="social-button"
+                aria-label="Patria Games on X"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="ph ph-x-logo"></i>
+              </a>
+              <a
+                href="https://vimeo.com/patriagames"
+                class="social-button"
+                aria-label="Patria Games on Vimeo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="ph ph-vimeo-logo"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@Patriagames"
+                class="social-button"
+                aria-label="Patria Games on YouTube"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="ph ph-youtube-logo"></i>
+              </a>
+            </div>
+
+            <a class="community-contact" href="mailto:contact@patriagames.com">
+              <span>Company contact</span>
+              <strong>contact@patriagames.com</strong>
+            </a>
           </div>
         </div>
       </div>
@@ -236,18 +523,30 @@
 
   <footer class="footer">
     <div class="brand-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+
     <div class="container footer-content">
       <div class="footer-brand">
-        <img src="assets/patria-logo.png" alt="Patria Games" />
-        <p>Independent game studio · Rio de Janeiro, Brazil</p>
+        <div class="footer-brand-media" data-media-shell>
+          <img src="assets/patria-logo.png" alt="Patria Games" data-media-image />
+          <span class="brand-fallback brand-fallback-footer" data-media-fallback>Patria Games</span>
+        </div>
+        <p>Independent game studio - Rio de Janeiro, Brazil</p>
       </div>
+
+      <div class="footer-contact">
+        <span>Business contact</span>
+        <a href="mailto:contact@patriagames.com">contact@patriagames.com</a>
+      </div>
+
       <div class="footer-side">
         <div class="footer-links">
           <a href="#games">Games</a>
+          <a href="#trailers">Trailers</a>
           <a href="#studio">Studio</a>
+          <a href="#contact">Contact</a>
           <a href="#community">Community</a>
         </div>
-        <p>© 2026 Patria Games. All rights reserved.</p>
+        <p>&copy; 2026 Patria Games. All rights reserved.</p>
       </div>
     </div>
   </footer>

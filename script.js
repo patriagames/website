@@ -1,38 +1,110 @@
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
+// NOTE: these variable names intentionally do NOT match the element ids
+// ("menuToggle" / "navMenu"). Older WebKit/Safari builds have a long-standing
+// bug (bugs.webkit.org #159270) where declaring a const/let with the exact
+// same name as an existing element id throws "Can't create duplicate
+// variable that shadows a global property" and silently aborts the entire
+// script - which would break the reveal-on-scroll effect for the whole page.
+const menuToggleBtn = document.getElementById('menuToggle');
+const navMenuEl = document.getElementById('navMenu');
+const headerEl = document.querySelector('.header');
 
-if (menuToggle && navMenu) {
-  menuToggle.addEventListener('click', () => {
-    const open = navMenu.classList.toggle('active');
-    menuToggle.setAttribute('aria-expanded', String(open));
-    const icon = menuToggle.querySelector('i');
-    icon.classList.toggle('ph-list', !open);
-    icon.classList.toggle('ph-x', open);
+const syncHeaderState = () => {
+  if (!headerEl) return;
+  headerEl.classList.toggle('is-scrolled', window.scrollY > 18);
+};
+
+syncHeaderState();
+window.addEventListener('scroll', syncHeaderState, { passive: true });
+
+if (menuToggleBtn && navMenuEl) {
+  const icon = menuToggleBtn.querySelector('i');
+
+  menuToggleBtn.addEventListener('click', () => {
+    const open = navMenuEl.classList.toggle('active');
+    document.body.classList.toggle('menu-open', open);
+    menuToggleBtn.setAttribute('aria-expanded', String(open));
+    if (icon) {
+      icon.classList.toggle('ph-list', !open);
+      icon.classList.toggle('ph-x', open);
+    }
   });
 
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      const icon = menuToggle.querySelector('i');
-      icon.classList.add('ph-list');
-      icon.classList.remove('ph-x');
+      navMenuEl.classList.remove('active');
+      document.body.classList.remove('menu-open');
+      menuToggleBtn.setAttribute('aria-expanded', 'false');
+      if (icon) {
+        icon.classList.add('ph-list');
+        icon.classList.remove('ph-x');
+      }
     });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 760) {
+      navMenuEl.classList.remove('active');
+      document.body.classList.remove('menu-open');
+      menuToggleBtn.setAttribute('aria-expanded', 'false');
+      if (icon) {
+        icon.classList.add('ph-list');
+        icon.classList.remove('ph-x');
+      }
+    }
   });
 }
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+const revealEls = document.querySelectorAll('.reveal');
 
-document.querySelectorAll('.reveal').forEach((el, index) => {
-  el.style.transitionDelay = `${Math.min(index % 3, 2) * 70}ms`;
-  revealObserver.observe(el);
+const showAllReveals = () => {
+  revealEls.forEach((el) => el.classList.add('visible'));
+};
+
+if ('IntersectionObserver' in window) {
+  try {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach((el, index) => {
+      el.style.transitionDelay = `${Math.min(index % 3, 2) * 70}ms`;
+      revealObserver.observe(el);
+    });
+  } catch (err) {
+    // If the observer setup fails for any reason, don't leave content hidden.
+    showAllReveals();
+  }
+} else {
+  // Older browsers/webviews without IntersectionObserver support: show content immediately.
+  showAllReveals();
+}
+
+// Safety net: if something above silently failed to reveal content (e.g. a
+// blocked/slow third-party script elsewhere on the page interfering), make
+// sure nothing stays invisible for more than a couple of seconds.
+window.setTimeout(showAllReveals, 2500);
+
+const mediaShellEls = document.querySelectorAll('[data-media-shell]');
+
+mediaShellEls.forEach((shell) => {
+  const image = shell.querySelector('[data-media-image]');
+  if (!image) return;
+
+  const syncMediaState = () => {
+    shell.classList.toggle('has-media', image.naturalWidth > 0);
+  };
+
+  if (image.complete) {
+    syncMediaState();
+  } else {
+    image.addEventListener('load', syncMediaState, { once: true });
+    image.addEventListener('error', syncMediaState, { once: true });
+  }
 });
 
 // Subtle Three.js star/particle field using Patria Games colors.
